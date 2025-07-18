@@ -42,17 +42,10 @@ Optionally, ensure gguf is installed if not already:
 pip install --upgrade gguf
 ```
 
-📸 Example Use
-Coming soon — full workflow demos for SDXL, SD3, and Flux setups.
-
 🙏 Attribution
 This project is based on and extends:
 
 city96/ComfyUI-GGUF
 Licensed under Apache 2.0 License
 
-Modifications, restructuring, and additional loader support by MaxedOut (2025).
-
-
-
-
+Modifications, restructuring, and additional loader support by Maxed-Out-99 (2025).
