@@ -34,11 +34,13 @@ Clone directly into your ComfyUI custom nodes directory:
 
 ```bash
 git clone https://github.com/YOUR_USERNAME_HERE/ComfyUI-SmartModelLoaders-MXD.git
+```
 
 Optionally, ensure gguf is installed if not already:
 
 ```bash
 pip install --upgrade gguf
+```
 
 📸 Example Use
 Coming soon — full workflow demos for SDXL, SD3, and Flux setups.
