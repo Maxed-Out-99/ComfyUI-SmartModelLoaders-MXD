@@ -4,7 +4,6 @@
 import logging
 import collections
 
-import nodes
 import comfy.sd
 import comfy.lora
 import comfy.float
