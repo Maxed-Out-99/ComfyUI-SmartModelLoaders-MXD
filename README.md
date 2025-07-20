@@ -33,7 +33,7 @@ Includes flexible UNET and CLIP loaders that work across models like SDXL, SD3, 
 Clone directly into your ComfyUI custom nodes directory:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME_HERE/ComfyUI-SmartModelLoaders-MXD.git
+git clone https://github.com/Maxed-Out-99/ComfyUI-SmartModelLoaders-MXD.git
 ```
 
 Optionally, ensure gguf is installed if not already:
