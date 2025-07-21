@@ -36,7 +36,7 @@ Clone directly into your ComfyUI custom nodes directory:
 git clone https://github.com/Maxed-Out-99/ComfyUI-SmartModelLoaders-MXD.git
 ```
 
-Optionally, ensure gguf is installed if not already:
+Install requirements:
 
 ```bash
 pip install -r requirements.txt
