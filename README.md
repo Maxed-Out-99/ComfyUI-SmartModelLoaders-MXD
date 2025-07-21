@@ -39,7 +39,7 @@ git clone https://github.com/Maxed-Out-99/ComfyUI-SmartModelLoaders-MXD.git
 Optionally, ensure gguf is installed if not already:
 
 ```bash
-pip install --upgrade gguf
+pip install -r requirements.txt
 ```
 
 🙏 Attribution
