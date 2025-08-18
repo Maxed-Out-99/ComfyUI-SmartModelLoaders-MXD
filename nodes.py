@@ -11,6 +11,7 @@ import comfy.utils
 import comfy.model_patcher
 import comfy.model_management
 import folder_paths
+import nodes
 
 from .ops import GGMLOps, move_patch_to_device
 from .loader import gguf_sd_loader, gguf_clip_loader
@@ -204,8 +205,8 @@ class DualCLIPLoaderUnified(SmartCLIPLoaderBase):
             "required": {
                 "clip_name1": clip_options,
                 "clip_name2": clip_options,
-                "type": (["sdxl", "sd3", "flux", "hunyuan_video", "hidream"],),
-            }
+                "type": nodes.CLIPLoader.INPUT_TYPES()["required"]["type"],
+                }
         }
 
     RETURN_TYPES = ("CLIP",)
@@ -230,8 +231,8 @@ class TripleCLIPLoaderUnified(SmartCLIPLoaderBase):
                 "clip_name1": clip_options,
                 "clip_name2": clip_options,
                 "clip_name3": clip_options,
-                "type": (["sd3"],),
-            }
+                "type": nodes.CLIPLoader.INPUT_TYPES()["required"]["type"],
+                }
         }
 
     RETURN_TYPES = ("CLIP",)
@@ -258,7 +259,7 @@ class QuadrupleCLIPLoaderUnified(SmartCLIPLoaderBase):
                 "clip_name2": clip_options,
                 "clip_name3": clip_options,
                 "clip_name4": clip_options,
-                "type": (["stable_diffusion"],),
+                "type": nodes.CLIPLoader.INPUT_TYPES()["required"]["type"],
             }
         }
 
@@ -282,7 +283,7 @@ class CLIPLoaderUnified(SmartCLIPLoaderBase):
         return {
             "required": {
                 "clip_name1": clip_options,
-                "type": (["sdxl", "sd3", "flux", "hunyuan_video", "hidream", "stable_diffusion"],),
+                "type": nodes.CLIPLoader.INPUT_TYPES()["required"]["type"],
             }
         }
 
