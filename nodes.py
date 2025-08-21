@@ -205,7 +205,7 @@ class DualCLIPLoaderUnified(SmartCLIPLoaderBase):
             "required": {
                 "clip_name1": clip_options,
                 "clip_name2": clip_options,
-                "type": nodes.CLIPLoader.INPUT_TYPES()["required"]["type"],
+                "type": nodes.DualCLIPLoader.INPUT_TYPES()["required"]["type"],
                 }
         }
 
