@@ -1,1 +1,1 @@
-import './js/betterCombos.js';
+import './js/bettercombos.js';
