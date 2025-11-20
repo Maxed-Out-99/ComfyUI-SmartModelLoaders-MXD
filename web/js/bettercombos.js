@@ -1,7 +1,7 @@
-import { app } from "../../scripts/app.js";
-import { ComfyWidgets } from "../../scripts/widgets.js";
-import { $el } from "../../scripts/ui.js";
-import { api } from "../../scripts/api.js";
+import { app } from "../../../scripts/app.js";
+import { ComfyWidgets } from "../../../scripts/widgets.js";
+import { $el } from "../../../scripts/ui.js";
+import { api } from "../../../scripts/api.js";
 
 const CHECKPOINT_LOADER = "CheckpointLoader|pysssss";
 const LORA_LOADER = "LoraLoader|pysssss";
