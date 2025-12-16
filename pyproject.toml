@@ -31,7 +31,7 @@ Documentation = "https://github.com/Maxed-Out-99/ComfyUI-SmartModelLoaders-MXD/w
 [tool.comfy]
 PublisherId = "maxedout"
 DisplayName = "Smart Model Loaders"
-Icon = ""
+Icon = "https://github.com/Maxed-Out-99/ComfyUI-MaxedOut/blob/main/assets/maxedout_icon.png?raw=true"
 includes = [] 
 # "requires-comfyui" = ">=1.0.0"  # ComfyUI version compatibility
 
