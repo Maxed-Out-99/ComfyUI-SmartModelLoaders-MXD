@@ -29,8 +29,8 @@ Documentation = "https://github.com/Maxed-Out-99/ComfyUI-SmartModelLoaders-MXD/w
 "Bug Tracker" = "https://github.com/Maxed-Out-99/ComfyUI-SmartModelLoaders-MXD/issues"
 
 [tool.comfy]
-PublisherId = ""
-DisplayName = "ComfyUI-SmartModelLoaders-MXD"
+PublisherId = "maxedout"
+DisplayName = "Smart Model Loaders"
 Icon = ""
 includes = [] 
 # "requires-comfyui" = ">=1.0.0"  # ComfyUI version compatibility
