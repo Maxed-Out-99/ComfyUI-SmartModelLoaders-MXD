@@ -165,6 +165,15 @@ class SmartCLIPLoaderBase:
         return [folder_paths.get_full_path("clip", name) for name in clip_names]
 
     def load_clip_models(self, clip_paths, clip_type):
+        if all(path is not None and not path.endswith(".gguf") for path in clip_paths):
+            clip = comfy.sd.load_clip(
+                ckpt_paths=clip_paths,
+                embedding_directory=folder_paths.get_folder_paths("embeddings"),
+                clip_type=clip_type,
+                model_options={},
+            )
+            return (clip,)
+
         clip_data = []
         use_ggml_ops = False
 
@@ -173,7 +182,8 @@ class SmartCLIPLoaderBase:
                 sd = gguf_clip_loader(path)
                 use_ggml_ops = True
             else:
-                sd = comfy.utils.load_torch_file(path, safe_load=True)
+                sd, metadata = comfy.utils.load_torch_file(path, safe_load=True, return_metadata=True)
+                sd, _metadata = comfy.utils.convert_old_quants(sd, model_prefix="", metadata=metadata)
             clip_data.append(sd)
 
         model_options = {
