@@ -12,6 +12,7 @@ import comfy.model_patcher
 import comfy.model_management
 import folder_paths
 import nodes
+import torch
 
 from .ops import GGMLOps, move_patch_to_device
 from .loader import gguf_sd_loader, gguf_clip_loader
