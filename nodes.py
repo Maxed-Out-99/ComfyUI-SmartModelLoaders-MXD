@@ -147,7 +147,7 @@ class UNETLoaderUnified:
     RETURN_TYPES = ("MODEL",)
     FUNCTION = "load_unet"
     CATEGORY = "advanced/loaders"
-    TITLE = "Smart UNet Loader MXD"
+    TITLE = "Smart Model Loader MXD"
 
     def load_unet(self, unet_name):
         if unet_name.endswith(".gguf"):
@@ -338,6 +338,7 @@ class CLIPLoaderUnified(SmartCLIPLoaderBase):
 ##########################################################################################################################################
 
 NODE_CLASS_MAPPINGS = {
+    # Keep the original key for backward compatibility with existing ComfyUI workflows.
     "UNETLoaderUnified": UNETLoaderUnified,
     "CLIPLoaderUnified": CLIPLoaderUnified,
     "DualCLIPLoaderUnified": DualCLIPLoaderUnified,
@@ -346,7 +347,7 @@ NODE_CLASS_MAPPINGS = {
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
-    "UNETLoaderUnified": "Smart UNET Loader MXD",
+    "UNETLoaderUnified": "Smart Model Loader MXD",
     "CLIPLoaderUnified": "Smart CLIP Loader MXD",
     "DualCLIPLoaderUnified": "Smart Dual CLIP Loader MXD",
     "TripleCLIPLoaderUnified": "Smart Triple CLIP Loader MXD",
