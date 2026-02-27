@@ -87,11 +87,11 @@ for (const type of Object.keys(CONFIG_BY_TYPE)) {
 }
 
 app.registerExtension({
-    name: "pysssss.Combo++",
+    name: "smlmxd.Combo++",
     init() {
         const displayOptions = { "List (normal)": 0, "Tree (subfolders)": 1, "Thumbnails (grid)": 2 };
         const displaySetting = app.ui.settings.addSetting({
-            id: "pysssss.Combo++.Submenu",
+            id: "smlmxd.Combo++.Submenu",
             name: "🐍 Loader display mode (Smart UNet/CLIP)",
             defaultValue: 1,
             type: "combo",
@@ -342,15 +342,15 @@ app.registerExtension({
                             style: { display: "none" },
                         });
 
-                        // Add items in this folder
+                        // Add subfolders first so folders appear above files
+                        insertFolderStructure(childContainer, content, level + 1);
+
+                        // Add items in this folder after subfolders
                         const items = content.get(itemsSymbol) || [];
                         for (const item of items) {
                             item.style.paddingLeft = `${(level + 1) * 10 + 14}px`;
                             childContainer.appendChild(item);
                         }
-
-                        // Recursively add subfolders
-                        insertFolderStructure(childContainer, content, level + 1);
                         parentElement.appendChild(childContainer);
 
                         // Add click handler for folder
@@ -369,7 +369,13 @@ app.registerExtension({
                     }
                 };
 
-                insertFolderStructure(items[0]?.parentElement || menu, folderMap);
+                const parentElement = items[0]?.parentElement || menu;
+                insertFolderStructure(parentElement, folderMap);
+
+                // Move root files after folders so folders show at the top level first
+                for (const item of rootItems) {
+                    parentElement.appendChild(item);
+                }
                 positionMenu(menu);
             };
 
